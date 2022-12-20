@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var targetValue = 0
-    @State var currentValue = 0
+    @State private var targetValue = Int.random(in: 0...100)
+    @State private var currentValue = Float.random(in: 0...100)
     
     var body: some View {
         
         ZStack {
             VStack(spacing: 16) {
+                Text("SLIDER VALUE: \(currentValue)") /// Удалить
                 Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
+                Slider(currentValue: $currentValue)
                 Button("Проверь меня!") {
                 }
                 Button("Начать заново") {
