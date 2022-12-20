@@ -18,7 +18,7 @@ struct ContentView: View {
             VStack(spacing: 16) {
                 Text("SLIDER VALUE: \(currentValue)") /// Удалить
                 Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
-//                Slider(currentValue: $currentValue, opacity: computeScore())
+                Slider(currentValue: $currentValue, opacity: computeScore())
                 Button("Проверь меня!") {
                 }
                 Button("Начать заново") {
