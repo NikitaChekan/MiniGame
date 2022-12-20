@@ -18,8 +18,6 @@ struct Slider: UIViewRepresentable {
         slider.minimumValue = 0
         slider.maximumValue = 100
         slider.tintColor = .green
-//        slider.thumbTintColor = .blue
-//            .withAlphaComponent(CGFloat(opacity) / 100)
         slider.addTarget(
             context.coordinator,
             action: #selector(Coordinator.changeDone),

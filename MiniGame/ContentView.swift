@@ -10,19 +10,27 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var targetValue = Int.random(in: 0...100)
-    @State private var currentValue = Double.random(in: 0...100).rounded()
+    @State private var currentValue = 50.0
+    
+    @State private var alertPresented = false
     
     var body: some View {
         
         ZStack {
-            VStack(spacing: 16) {
-                Text("SLIDER VALUE: \(currentValue)") /// Удалить
+            VStack(spacing: 20) {
                 Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
-                Slider(currentValue: $currentValue, opacity: computeScore())
-                Button("Проверь меня!") {
+                HStack {
+                    Text("0")
+                    Slider(currentValue: $currentValue, opacity: computeScore())
+                    Text("100")
                 }
+                .padding()
+                
+                Button("Проверь меня!") { alertPresented.toggle() }
+                    .alert("Your Score: \(computeScore())", isPresented: $alertPresented) {}
                 Button("Начать заново") {
-                    currentValue = Double.random(in: 0...100).rounded()
+                    targetValue = Int.random(in: 0...100)
+                    currentValue = 50
                 }
             }
             .padding()
