@@ -2,20 +2,28 @@
 //  ContentView.swift
 //  MiniGame
 //
-//  Created by jopootrivatel on 20.12.2022.
+//  Created by Nikita Chekan on 20.12.2022.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var targetValue = 0
+    @State var currentValue = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack {
+            VStack(spacing: 16) {
+                Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
+                Button("Проверь меня!") {
+                }
+                Button("Начать заново") {
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 

@@ -2,7 +2,7 @@
 //  MiniGameApp.swift
 //  MiniGame
 //
-//  Created by jopootrivatel on 20.12.2022.
+//  Created by Nikita Chekan on 20.12.2022.
 //
 
 import SwiftUI
