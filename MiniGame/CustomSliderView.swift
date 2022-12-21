@@ -1,5 +1,5 @@
 //
-//  SliderView.swift
+//  CustomSliderView.swift
 //  MiniGame
 //
 //  Created by Nikita Chekan on 20.12.2022.
@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-struct Slider: UIViewRepresentable {
+struct CustomSliderView: UIViewRepresentable {
     
-    @Binding var currentValue: Double
-    let opacity: Int
+    @Binding var value: Double
+    
+    let alpha: Int
+    let color: UIColor
     
     func makeUIView(context: Context) -> UISlider {
         
         let slider = UISlider()
         slider.minimumValue = 0
         slider.maximumValue = 100
+        
         slider.tintColor = .green
         slider.addTarget(
             context.coordinator,
@@ -28,32 +31,32 @@ struct Slider: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
-        uiView.value = Float(currentValue)
-        uiView.thumbTintColor = .blue.withAlphaComponent(CGFloat(opacity) / 100)
+        uiView.value = Float(value)
+        uiView.thumbTintColor = color.withAlphaComponent(CGFloat(alpha) / 100)
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(currentValue: $currentValue)
+        Coordinator(currentValue: $value)
     }
     
 }
 
-extension Slider {
+extension CustomSliderView {
     class Coordinator: NSObject {
-        @Binding var currentValue: Double
+        @Binding var value: Double
         
         init(currentValue: Binding<Double>) {
-            self._currentValue = currentValue
+            self._value = currentValue
         }
         
         @objc func changeDone(_ sender: UISlider) {
-            currentValue = Double(sender.value)
+            value = Double(sender.value)
         }
     }
 }
 
 struct SliderView_Previews: PreviewProvider {
     static var previews: some View {
-        Slider(currentValue: .constant(66), opacity: 50)
+        CustomSliderView(value: .constant(66), alpha: 50, color: .blue)
     }
 }

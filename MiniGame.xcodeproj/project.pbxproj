@@ -11,7 +11,7 @@
 		DA0E71E52951D89700B6A561 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E71E42951D89700B6A561 /* ContentView.swift */; };
 		DA0E71E72951D89C00B6A561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0E71E62951D89C00B6A561 /* Assets.xcassets */; };
 		DA0E71EA2951D89C00B6A561 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0E71E92951D89C00B6A561 /* Preview Assets.xcassets */; };
-		DA0E71F32951DDE800B6A561 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E71F22951DDE800B6A561 /* Slider.swift */; };
+		DA0E71F32951DDE800B6A561 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E71F22951DDE800B6A561 /* CustomSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		DA0E71E42951D89700B6A561 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA0E71E62951D89C00B6A561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA0E71E92951D89C00B6A561 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DA0E71F22951DDE800B6A561 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
+		DA0E71F22951DDE800B6A561 /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			children = (
 				DA0E71E22951D89700B6A561 /* MiniGameApp.swift */,
 				DA0E71E42951D89700B6A561 /* ContentView.swift */,
-				DA0E71F22951DDE800B6A561 /* Slider.swift */,
+				DA0E71F22951DDE800B6A561 /* CustomSliderView.swift */,
 				DA0E71E62951D89C00B6A561 /* Assets.xcassets */,
 				DA0E71E82951D89C00B6A561 /* Preview Content */,
 			);
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA0E71F32951DDE800B6A561 /* Slider.swift in Sources */,
+				DA0E71F32951DDE800B6A561 /* CustomSliderView.swift in Sources */,
 				DA0E71E52951D89700B6A561 /* ContentView.swift in Sources */,
 				DA0E71E32951D89700B6A561 /* MiniGameApp.swift in Sources */,
 			);

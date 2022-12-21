@@ -21,13 +21,19 @@ struct ContentView: View {
                 Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
                 HStack {
                     Text("0")
-                    Slider(currentValue: $currentValue, opacity: computeScore())
+                    CustomSliderView(
+                        value: $currentValue,
+                        alpha: computeScore(),
+                        color: .blue
+                    )
                     Text("100")
                 }
                 .padding()
                 
                 Button("Проверь меня!") { alertPresented.toggle() }
-                    .alert("Your Score: \(computeScore())", isPresented: $alertPresented) {}
+                    .alert("Your Score:", isPresented: $alertPresented, actions: {}) {
+                        Text(computeScore().formatted())
+                    }
                 Button("Начать заново") {
                     targetValue = Int.random(in: 0...100)
                     currentValue = 50
